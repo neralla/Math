@@ -24,6 +24,7 @@ namespace MathApplication
         private long largestPrime=7;
         private void GeneratePrime_Click(object sender, EventArgs e)
         {
+            lblSeconds.Visible = true;
             counter = 0;
             tokensource = new CancellationTokenSource();
             token = tokensource.Token;
