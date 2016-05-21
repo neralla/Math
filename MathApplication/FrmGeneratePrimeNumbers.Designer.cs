@@ -46,7 +46,7 @@
             this.btnGeneratePrimeNumbers.TabIndex = 0;
             this.btnGeneratePrimeNumbers.Text = "GeneratePrimeNumbers";
             this.btnGeneratePrimeNumbers.UseVisualStyleBackColor = true;
-            this.btnGeneratePrimeNumbers.Click += new System.EventHandler(this.GeneratePrime_Click);
+            this.btnGeneratePrimeNumbers.Click += new System.EventHandler(this.btnGeneratePrime_Click);
             // 
             // SecondsTimer
             // 

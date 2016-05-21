@@ -20,9 +20,9 @@ namespace MathApplication
         private int counter;
         private CancellationToken token;
         private CancellationTokenSource tokensource  ;
-        private int timeInSeconds = 60;
+        private int maxTimeInSeconds = 60;
         private long largestPrime=7;
-        private void GeneratePrime_Click(object sender, EventArgs e)
+        private void btnGeneratePrime_Click(object sender, EventArgs e)
         {
             lblSeconds.Visible = true;
             counter = 0;
@@ -36,7 +36,7 @@ namespace MathApplication
         private void Secondstimer_Tick(object sender, EventArgs e)
         {
 
-            if (counter < timeInSeconds)
+            if (counter < maxTimeInSeconds)
             {
                 counter++;
                 lblSecondsProgress.Text = counter.ToString();
@@ -83,7 +83,7 @@ namespace MathApplication
                         }                
 
                 }, token);
-                t.Wait(timeInSeconds);
+                t.Wait(maxTimeInSeconds);
                 return largestPrime;
             }
             catch (AggregateException agEx)
